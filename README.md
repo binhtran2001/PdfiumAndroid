@@ -16,7 +16,7 @@ This fork is updated to **SDK 35 / NDK 28** and delivers a working AAR compatibl
 - **Native library packaging** corrected in AAR
 - **16KB page size support** for Android 15
 - **Windows Git Bash** compatible build script
-- **Updated to [PDFium 142.0.7415.0](https://github.com/bblanchon/pdfium-binaries/releases/tag/chromium%2F7415)
+- **Updated to [PDFium 142.0.7415.0](https://github.com/bblanchon/pdfium-binaries/releases/tag/chromium%2F7415)**
 
 ## Requirements
 
