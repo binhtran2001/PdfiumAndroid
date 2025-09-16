@@ -6,7 +6,7 @@ This repository is a fork of [meganz/PdfiumAndroid](https://github.com/meganz/Pd
 
 This fork is updated to **SDK 35 / NDK 28** and delivers a working AAR compatible with **Android 15 (16KB page size support)**.
 
-**Version 2.0.1** - Significant updates to the build layer and compatibility improvements warrant a major version bump from the original 1.9.0.
+**Version 2.0.2** - Significant updates to the build layer and compatibility improvements warrant a major version bump from the original 1.9.0.
 
 ### Key Updates:
 - **Android SDK 35** and **NDK 28** compatibility
@@ -16,6 +16,7 @@ This fork is updated to **SDK 35 / NDK 28** and delivers a working AAR compatibl
 - **Native library packaging** corrected in AAR
 - **16KB page size support** for Android 15
 - **Windows Git Bash** compatible build script
+- **Updated to [PDFium 142.0.7415.0](https://github.com/bblanchon/pdfium-binaries/releases/tag/chromium%2F7415)
 
 ## Requirements
 
@@ -50,17 +51,17 @@ Remark: you might need to update the 'javaHome' environment variable in the `gra
 # Build release AAR  
 ./gradlew assembleRelease
 
-# Output: build/outputs/aar/PdfiumAndroid-2.0.1-release.aar
+# Output: build/outputs/aar/PdfiumAndroid-2.0.2-release.aar
 ```
 
 ## Using in Your Project
 
 ### Method 1: Local AAR
-1. Copy `PdfiumAndroid-2.0.1-release.aar` to your app's `libs/` folder
+1. Copy `PdfiumAndroid-2.0.2-release.aar` to your app's `libs/` folder
 2. Add to your app's `build.gradle`:
 ```groovy
 dependencies {
-    implementation files('libs/PdfiumAndroid-2.0.1-release.aar')
+    implementation files('libs/PdfiumAndroid-2.0.2-release.aar')
     implementation 'androidx.core:core:1.16.0'
 }
 ```
@@ -72,7 +73,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.yourusername:PdfiumAndroid:v2.0.1'
+    implementation 'com.github.yourusername:PdfiumAndroid:v2.0.2'
 }
 ```
 
@@ -114,7 +115,6 @@ PdfDocument pdfDocument = pdfiumCore.newDocument(parcelFileDescriptor);
 
 - Original work: [barteksc/PdfiumAndroid](https://github.com/barteksc/PdfiumAndroid)
 - 16KB page size foundation: [meganz/PdfiumAndroid](https://github.com/meganz/PdfiumAndroid)
-- Upgrade to [PDFium 133.0.6927.0](https://github.com/bblanchon/pdfium-binaries/releases/tag/chromium%2F6927)
 - Add a `CMakeLists.txt` for building PdfiumAndroid `.so` file.
 - Update [libpng v1.6.44](https://github.com/pnggroup/libpng/releases/tag/v1.6.44) and [libfreetype2 v2.10.0](https://download.savannah.gnu.org/releases/freetype/) binaries for building PdfiumAndroid library. 
 

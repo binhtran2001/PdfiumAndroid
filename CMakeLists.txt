@@ -34,6 +34,11 @@ target_link_libraries(jniPdfium
         PRIVATE ${CMAKE_SOURCE_DIR}/src/main/jni/lib/${ANDROID_ABI}/libc++_shared.so
 )
 
+# Force correct PT_LOAD alignment for modpdfium on all ABIs
+set_target_properties(jniPdfium PROPERTIES
+    LINK_FLAGS "-Wl,-z,max-page-size=0x4000"
+)
+
 # Specify additional compile options if required
 target_compile_options(jniPdfium PRIVATE
         -Wall -Wextra -DHAVE_PTHREADS
